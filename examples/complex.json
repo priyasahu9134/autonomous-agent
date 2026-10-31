@@ -1,0 +1,267 @@
+{
+  "request": "Write a decision-ready project plan for launching a customer support chatbot in two weeks with a hard INR 50,000 cash budget. We have two engineers available half-time, no approved knowledge base, and no vendor selected. It must handle every customer question with 100% accuracy, support English and Hindi, and integrate with our CRM, but customer personal data must never leave our network. Decide a realistic scope, resolve conflicts, make explicit assumptions, include a budget and timeline, and tell leadership what to approve. Do not invent research or actual performance results.",
+  "plan": {
+    "title": "Customer Support Chatbot: Two-Week Internal Pilot Decision Plan",
+    "document_type": "Project decision plan",
+    "audience": "Leadership, support owner and engineering lead",
+    "objective": "Decide whether a restricted internal pilot can proceed within two weeks and INR 50,000 without sending customer personal data outside the network.",
+    "assumptions": [
+      "Two half-time engineers provide a combined 80 engineering hours across ten working days, assuming an eight-hour workday.",
+      "The hard INR 50,000 budget covers incremental cash spend; existing employee salaries are excluded and require leadership confirmation.",
+      "Suitable internal compute and network controls already exist. If not, pause at the infrastructure gate rather than buy a cloud service.",
+      "A support owner can review 20 English FAQ answers by day 2; none are currently approved.",
+      "All estimates and proposed evaluation thresholds are illustrative; no research, vendor quotes or performance tests have been performed."
+    ],
+    "decisions": [
+      "Replace the universal 100% accuracy promise with a restricted FAQ pilot, source-backed answers, abstention and human escalation. Leadership must approve this change.",
+      "Run the pilot only inside the existing network using approved non-personal content and synthetic questions; block outbound traffic.",
+      "Defer live CRM integration and Hindi generation. Use a synthetic CRM export and have a support reviewer assess Hindi requirements for a later phase.",
+      "Treat two weeks as a decision gate for an internal pilot, not a guaranteed production launch. No approved content by day 2 means no-go."
+    ],
+    "tasks": [
+      {
+        "id": "task_1",
+        "title": "Resolve conflicting requirements",
+        "instruction": "Explain why the full request is infeasible and propose a restricted scope that preserves privacy, the cash budget and deadline.",
+        "depends_on": [],
+        "acceptance_criteria": "Reject the accuracy guarantee, disclose deferred Hindi and CRM requirements, and require leadership scope approval.",
+        "section_id": "section_1"
+      },
+      {
+        "id": "task_2",
+        "title": "Design the internal pilot",
+        "instruction": "Specify a minimal on-network design using approved FAQs, abstention, synthetic CRM data and restricted access.",
+        "depends_on": [
+          "task_1"
+        ],
+        "acceptance_criteria": "Show the data flow, privacy controls, answer boundaries and missing-content stop condition.",
+        "section_id": "section_2"
+      },
+      {
+        "id": "task_3",
+        "title": "Schedule work within capacity",
+        "instruction": "Allocate the combined 80 engineer-hours across ten days with owners and explicit go/no-go gates.",
+        "depends_on": [
+          "task_1",
+          "task_2"
+        ],
+        "acceptance_criteria": "Effort totals at most 80 hours and includes content approval, security review and evaluation.",
+        "section_id": "section_3"
+      },
+      {
+        "id": "task_4",
+        "title": "Allocate cash and expose risks",
+        "instruction": "Build an illustrative budget totaling no more than INR 50,000 and record blockers, owners and mitigation.",
+        "depends_on": [
+          "task_2",
+          "task_3"
+        ],
+        "acceptance_criteria": "Distinguish existing salary from cash costs and forbid spending the budget on external data processing.",
+        "section_id": "section_4"
+      },
+      {
+        "id": "task_5",
+        "title": "Define evaluation and leadership decision",
+        "instruction": "Create measurable internal pilot gates, escalation criteria and the specific approvals needed from leadership.",
+        "depends_on": [
+          "task_1",
+          "task_2",
+          "task_3",
+          "task_4"
+        ],
+        "acceptance_criteria": "Use proposed test thresholds, not invented results; include a no-go path if content, privacy or capacity assumptions fail.",
+        "section_id": "section_5"
+      }
+    ],
+    "document_format": {
+      "required_headings": [],
+      "max_words_per_section": null,
+      "allow_tables": true,
+      "include_metadata": true,
+      "include_assumptions": true,
+      "include_decisions": true,
+      "include_execution_appendix": false
+    },
+    "outline": [
+      {
+        "id": "section_1",
+        "heading": "Decision brief and revised scope"
+      },
+      {
+        "id": "section_2",
+        "heading": "Minimal design and privacy boundary"
+      },
+      {
+        "id": "section_3",
+        "heading": "Ten-day schedule and engineering capacity"
+      },
+      {
+        "id": "section_4",
+        "heading": "Cash allocation and delivery risks"
+      },
+      {
+        "id": "section_5",
+        "heading": "Pilot acceptance and leadership approvals"
+      }
+    ]
+  },
+  "sections": {
+    "task_1": {
+      "heading": "Decision brief and revised scope",
+      "paragraphs": [
+        "Leadership should approve a restricted internal FAQ pilot, subject to content and infrastructure gates. The requested combination of universal coverage, 100% accuracy, bilingual generation and live CRM integration cannot responsibly be committed within two weeks given the absent knowledge base and limited capacity. A language model cannot guarantee correct answers to every customer question.",
+        "Preserve the INR 50,000 cash ceiling, two-week decision window and network boundary. Change the deliverable to a staff-only English pilot answering up to 20 approved FAQs. Defer live CRM integration and generated Hindi responses. These are explicit changes to the original request requiring leadership approval, not fulfillment of all original requirements."
+      ],
+      "bullets": [
+        "In scope: approved FAQ answers, source display, out-of-scope abstention, human escalation and staff-only access.",
+        "Deferred: customer-facing launch, all-question coverage, production CRM writes and Hindi generation.",
+        "If leadership requires the original scope unchanged, the recommendation is no-go and a new estimate after discovery."
+      ],
+      "tables": []
+    },
+    "task_2": {
+      "heading": "Minimal design and privacy boundary",
+      "paragraphs": [
+        "Use an approved FAQ matching layer on existing internal compute. An optional local language model may paraphrase approved content only after infrastructure and license review; it is not required for the two-week pilot. Data flow: authenticated staff question, personal-data rejection, approved FAQ match, answer with FAQ identifier, or abstention and internal support handoff. Never claim that prompt wording alone enforces privacy.",
+        "Restrict inputs to synthetic cases during the pilot. Block outbound network access for the service, disable external telemetry and store access-controlled logs without raw questions. Run a data-flow review before any testing. Unapproved FAQs remain unavailable; no approved content by day 2 stops implementation."
+      ],
+      "bullets": [
+        "Support owner maintains approved FAQ text and version history on the internal network.",
+        "Use a synthetic CRM export only; do not connect to production CRM or use customer records.",
+        "Unmatched or conflicting answers return an explicit inability to answer and an internal support contact.",
+        "Security owner verifies outbound blocking and tests for accidental data capture; no control is assumed effective until checked."
+      ],
+      "tables": []
+    },
+    "task_3": {
+      "heading": "Ten-day schedule and engineering capacity",
+      "paragraphs": [
+        "Two engineers working four hours per day for ten days provide 80 combined hours. The illustrative allocation below uses the full capacity, so new features require equivalent scope removal or a revised deadline. Support content authoring and leadership decisions require separately confirmed availability; engineer review time is included."
+      ],
+      "bullets": [
+        "Day 2 gate: approved FAQ content, internal host and revised scope must be confirmed.",
+        "Day 8 gate: privacy checks pass before staff testing.",
+        "Day 10 gate: leadership reviews measured results and chooses stop, revise or continue the internal pilot."
+      ],
+      "tables": [
+        {
+          "title": "Illustrative engineering allocation",
+          "columns": [
+            "Days",
+            "Work",
+            "Owner",
+            "Combined hours"
+          ],
+          "rows": [
+            [
+              "1–2",
+              "Scope, FAQ review and infrastructure gate",
+              "Engineers A + B; support owner approves",
+              "16"
+            ],
+            [
+              "3–4",
+              "FAQ matching, abstention and source display",
+              "Engineer A + Engineer B",
+              "16"
+            ],
+            [
+              "5–6",
+              "Internal access and synthetic CRM fixture",
+              "Engineers A + B",
+              "16"
+            ],
+            [
+              "7–8",
+              "Privacy review and evaluation harness",
+              "Engineers A + B; security owner reviews",
+              "16"
+            ],
+            [
+              "9",
+              "Staff pilot and issue triage",
+              "Engineers A + B",
+              "8"
+            ],
+            [
+              "10",
+              "Fixes, handover and decision pack",
+              "Engineers A + B",
+              "8"
+            ],
+            [
+              "Total",
+              "No spare engineering capacity",
+              "Engineering lead",
+              "80"
+            ]
+          ]
+        }
+      ]
+    },
+    "task_4": {
+      "heading": "Cash allocation and delivery risks",
+      "paragraphs": [
+        "The illustrative cash allocation totals INR 50,000 and assumes existing salaries and internal compute are already funded. These are planning allowances, not supplier quotes. If either assumption fails, leadership must reduce scope or stop; the team must not exceed the ceiling or route data through an external service to meet the date."
+      ],
+      "bullets": [
+        "Content risk: support owner must approve FAQs by day 2; otherwise no-go.",
+        "Infrastructure risk: security owner must confirm on-network hosting; lack of capacity stops the pilot.",
+        "Capacity risk: engineering lead rejects added features unless an equivalent task is removed.",
+        "Language risk: Hindi service demand remains unmet; support owner retains existing human support."
+      ],
+      "tables": [
+        {
+          "title": "Illustrative cash budget (INR)",
+          "columns": [
+            "Allocation",
+            "Amount",
+            "Condition"
+          ],
+          "rows": [
+            [
+              "Internal security review allowance",
+              "15,000",
+              "Review stays on network"
+            ],
+            [
+              "Content review and Hindi discovery allowance",
+              "10,000",
+              "No generated Hindi launch"
+            ],
+            [
+              "Internal deployment and backup allowance",
+              "10,000",
+              "Existing internal infrastructure only"
+            ],
+            [
+              "Controlled contingency",
+              "15,000",
+              "Sponsor release; no external data processing"
+            ],
+            [
+              "Total ceiling",
+              "50,000",
+              "Existing salaries excluded"
+            ]
+          ]
+        }
+      ]
+    },
+    "task_5": {
+      "heading": "Pilot acceptance and leadership approvals",
+      "paragraphs": [
+        "Create an illustrative evaluation set of 40 approved-topic questions and 20 out-of-scope or privacy-sensitive questions using synthetic content. The following thresholds are proposed acceptance gates, not observed performance. Passing a small evaluation set does not prove universal accuracy, and the system remains staff-only.",
+        "Leadership must approve the reduced scope, salary exclusion, accountable support and security owners, and the INR 50,000 maximum allocation before work begins. At day 10, review actual results and costs. Any failed gate leads to a documented stop or revised plan, not an automatic customer launch."
+      ],
+      "bullets": [
+        "Proposed quality gate: at least 38 of 40 approved-topic answers accepted by the support reviewer; every returned answer shows an approved FAQ identifier.",
+        "Proposed boundary gate: all 20 out-of-scope or privacy-sensitive cases abstain or reject input, with zero external network egress observed in the controlled test.",
+        "Proposed operational gate: no unresolved critical security defects; rollback and human handoff demonstrated.",
+        "Stop conditions: unapproved content, failed network isolation, unavailable compute, exceeded capacity or unapproved scope changes.",
+        "Future phase: estimate Hindi coverage and read-only CRM integration after approval, threat review and separately funded discovery."
+      ],
+      "tables": []
+    }
+  }
+}

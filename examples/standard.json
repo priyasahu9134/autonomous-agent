@@ -1,0 +1,253 @@
+{
+  "request": "Create a project proposal for a 6-week employee onboarding portal for Acme Services, a 50-person company. Include scope, timeline, roles, an illustrative INR 150,000 budget, risks, and success criteria. The audience is the operations director.",
+  "plan": {
+    "title": "Acme Services: Employee Onboarding Portal Proposal",
+    "document_type": "Project proposal",
+    "audience": "Operations director",
+    "objective": "Approve a six-week delivery plan for a focused onboarding portal within an illustrative INR 150,000 allocation.",
+    "assumptions": [
+      "All costs and effort estimates are illustrative planning figures, not vendor quotes.",
+      "Acme will provide approved onboarding policies and an existing identity provider in week 1.",
+      "The portal supports 50 employees; payroll and HR system integration are excluded.",
+      "Week 1 begins after sponsor approval; no calendar start date was provided."
+    ],
+    "decisions": [
+      "Prioritize policy access, onboarding checklists and manager visibility over custom integrations.",
+      "Use sponsor sign-off at the end of week 1 to prevent late scope expansion."
+    ],
+    "tasks": [
+      {
+        "id": "task_1",
+        "title": "Define outcomes and scope",
+        "instruction": "Write the proposal overview, included capabilities and explicit exclusions for the 50-person company.",
+        "depends_on": [],
+        "acceptance_criteria": "Describe the business need, three core capabilities, and what will not be built.",
+        "section_id": "section_1"
+      },
+      {
+        "id": "task_2",
+        "title": "Sequence delivery and ownership",
+        "instruction": "Turn the agreed scope into a six-week schedule with owners and review gates.",
+        "depends_on": [
+          "task_1"
+        ],
+        "acceptance_criteria": "Cover all six weeks and name accountable roles and deliverables.",
+        "section_id": "section_2"
+      },
+      {
+        "id": "task_3",
+        "title": "Allocate the illustrative budget",
+        "instruction": "Allocate INR 150,000 across scoped delivery activities and contingency, stating cost assumptions.",
+        "depends_on": [
+          "task_1",
+          "task_2"
+        ],
+        "acceptance_criteria": "Budget rows sum to INR 150,000 and distinguish illustrative estimates from actual quotes.",
+        "section_id": "section_3"
+      },
+      {
+        "id": "task_4",
+        "title": "Define risks and acceptance",
+        "instruction": "Identify delivery risks, mitigations and measurable pilot acceptance criteria consistent with the scope and schedule.",
+        "depends_on": [
+          "task_1",
+          "task_2",
+          "task_3"
+        ],
+        "acceptance_criteria": "Include risk owners, measurable targets and the sponsor approval request.",
+        "section_id": "section_4"
+      }
+    ],
+    "document_format": {
+      "required_headings": [],
+      "max_words_per_section": null,
+      "allow_tables": true,
+      "include_metadata": true,
+      "include_assumptions": true,
+      "include_decisions": true,
+      "include_execution_appendix": false
+    },
+    "outline": [
+      {
+        "id": "section_1",
+        "heading": "Proposal overview and scope"
+      },
+      {
+        "id": "section_2",
+        "heading": "Six-week delivery and responsibilities"
+      },
+      {
+        "id": "section_3",
+        "heading": "Illustrative budget and cost controls"
+      },
+      {
+        "id": "section_4",
+        "heading": "Risks, success criteria and approval"
+      }
+    ]
+  },
+  "sections": {
+    "task_1": {
+      "heading": "Proposal overview and scope",
+      "paragraphs": [
+        "Acme Services can consolidate employee onboarding into one portal, giving new joiners a consistent starting point and managers a clear record of progress. The proposed six-week project serves a 50-person company and focuses on reducing manual coordination. Benefits are proposed outcomes, not measured results.",
+        "The operations director acts as sponsor and approves policy content and scope. HR owns checklist accuracy; the delivery lead owns implementation and release readiness."
+      ],
+      "bullets": [
+        "Include: searchable policy library, role-based onboarding checklists and manager progress view.",
+        "Include: employee and manager access roles using the existing identity provider.",
+        "Exclude: payroll, automated HR system synchronization, mobile apps and advanced analytics."
+      ],
+      "tables": []
+    },
+    "task_2": {
+      "heading": "Six-week delivery and responsibilities",
+      "paragraphs": [
+        "Delivery proceeds through short review gates so content and access decisions are resolved before release. The operations director approves scope in week 1 and release in week 6. HR provides feedback within two business days of each review; delays trigger replanning rather than compressed testing."
+      ],
+      "bullets": [],
+      "tables": [
+        {
+          "title": "Illustrative delivery schedule",
+          "columns": [
+            "Week",
+            "Deliverable",
+            "Accountable role",
+            "Review gate"
+          ],
+          "rows": [
+            [
+              "1",
+              "Approved scope, checklist and policy inventory",
+              "Operations director",
+              "Scope signed off"
+            ],
+            [
+              "2",
+              "Clickable portal design and access model",
+              "Delivery lead",
+              "HR walkthrough complete"
+            ],
+            [
+              "3",
+              "Policy library and employee checklist",
+              "Developer",
+              "Core workflow demo"
+            ],
+            [
+              "4",
+              "Manager dashboard and access controls",
+              "Developer",
+              "Role permissions reviewed"
+            ],
+            [
+              "5",
+              "Pilot with five volunteer users",
+              "HR lead",
+              "Defects triaged"
+            ],
+            [
+              "6",
+              "Training, acceptance and controlled launch",
+              "Delivery lead",
+              "Sponsor go/no-go"
+            ]
+          ]
+        }
+      ]
+    },
+    "task_3": {
+      "heading": "Illustrative budget and cost controls",
+      "paragraphs": [
+        "The proposed allocation totals INR 150,000. These figures are illustrative, assume existing infrastructure and identity services, and require validation before commitment. Ongoing support and incremental subscription charges are excluded and must be quoted separately. The contingency may be released only by the operations director."
+      ],
+      "bullets": [
+        "Track actual cost against allocation weekly; reduce optional dashboard polish before consuming contingency.",
+        "Any change that exceeds the allocation requires sponsor approval or removal of equivalent scope."
+      ],
+      "tables": [
+        {
+          "title": "Illustrative cost allocation (INR)",
+          "columns": [
+            "Category",
+            "Allocation"
+          ],
+          "rows": [
+            [
+              "Discovery and design",
+              "20,000"
+            ],
+            [
+              "Development",
+              "75,000"
+            ],
+            [
+              "Testing and pilot",
+              "20,000"
+            ],
+            [
+              "Training and documentation",
+              "10,000"
+            ],
+            [
+              "Deployment setup",
+              "10,000"
+            ],
+            [
+              "Contingency",
+              "15,000"
+            ],
+            [
+              "Total",
+              "150,000"
+            ]
+          ]
+        }
+      ]
+    },
+    "task_4": {
+      "heading": "Risks, success criteria and approval",
+      "paragraphs": [
+        "The five-user pilot in week 5 validates usability before the week 6 release decision. Targets below are proposed acceptance gates. No pilot results have been collected. The operations director should approve the scope and illustrative allocation, nominate the HR content owner, and confirm the identity service before kickoff."
+      ],
+      "bullets": [
+        "Acceptance: all five pilot users can find an assigned policy and complete a checklist without assistance.",
+        "Acceptance: permission tests prevent employees from seeing another employee's checklist.",
+        "Acceptance: no unresolved critical defects at launch; HR approves every published policy.",
+        "Post-launch target: 90% of new joiners complete assigned onboarding within ten working days, assessed after the first cohort."
+      ],
+      "tables": [
+        {
+          "title": "Delivery risk register",
+          "columns": [
+            "Risk",
+            "Mitigation",
+            "Owner"
+          ],
+          "rows": [
+            [
+              "Late policy content",
+              "Freeze the initial inventory in week 1; defer incomplete policies",
+              "HR lead"
+            ],
+            [
+              "Identity integration delay",
+              "Validate access in week 2; escalate blockers at once",
+              "Delivery lead"
+            ],
+            [
+              "Scope expansion",
+              "Require cost and schedule impact review for every change",
+              "Operations director"
+            ],
+            [
+              "Low adoption",
+              "Use pilot feedback and a short manager training session",
+              "HR lead"
+            ]
+          ]
+        }
+      ]
+    }
+  }
+}
